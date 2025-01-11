@@ -29,6 +29,19 @@ const deleteProduct=async(id)=>{
      console.log(data)
 }
 console.log(cartData)
+
+const orderCartItems=async()=>{
+   const res=await fetch('http://localhost:4000/create-order',{
+    method:'POST',
+    body:JSON.stringify({}),
+    headers:{
+        'Content-Type':'application/json'
+    }
+   })
+
+   const data=await res.json()
+   console.log(data)
+}
     return(
         <Container>
              
@@ -46,6 +59,9 @@ console.log(cartData)
 
                     </Col>
                 })}
+                <div className='my-2 d-flex justify-content-end'>
+                    <Button className='btn-success' onClick={orderCartItems}>Order</Button>
+                </div>
             </Row>
             </Container>
     )
