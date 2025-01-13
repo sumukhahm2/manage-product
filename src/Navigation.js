@@ -14,7 +14,7 @@ const Navigation=()=> {
             <Nav.Link href="/shop">Shop</Nav.Link>
             <Nav.Link href="#link">Product</Nav.Link>
             <Nav.Link href="/cart">Cart</Nav.Link>
-            <Nav.Link href="#link">Orders</Nav.Link>
+            <Nav.Link href="/orders">Orders</Nav.Link>
             <Nav.Link href="/add-product">Add Product</Nav.Link>
             <Nav.Link href="/admin-products">Admin Product</Nav.Link>
           </Nav>

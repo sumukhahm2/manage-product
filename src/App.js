@@ -7,6 +7,7 @@ import AddProduct from './AddProduct'
 import AllProducts from './AllProducts'
 import AdminProducts from './AdminProducts'
 import Cart from './Cart'
+import Order from './order'
 function App() {
   return (
     <div>
@@ -18,10 +19,10 @@ function App() {
           <Routes>
              <Route path='/shop' element={<AllProducts/>}/>
              <Route path='/products'/>
-             <Route path='/orders'/>
              <Route path='/add-product' element={<AddProduct/>}/>
              <Route path='/admin-products' element={<AdminProducts/>}/>
              <Route path='/cart' element={<Cart/>}/>
+             <Route path='/orders' element={<Order/>}/>
           </Routes>
       </main>
     </div>
