@@ -48,14 +48,14 @@ const orderCartItems=async()=>{
             <Row>
             <p>Cart Items</p>
                 {cartData && cartData.map((item)=>{
-                   return <Col className='border border-ridge shadow-lg text-center fs-4' key={item._id}>
-                         <p>{item.title}</p>
+                   return <Col className='border border-ridge shadow-lg text-center fs-4' key={item.productId._id}>
+                         <p>{item.productId.title}</p>
                          <hr/>
-                         <p>{item.imageURL}</p>
-                         <p>{item.description}</p>
-                         <p>{item.price}</p>
-                         <p>{item.quantity}</p>
-                         <Button onClick={()=>deleteProduct(item._id)}>Delete</Button>
+                         <img src={item.productId.imageURL} alt={item.productId.imageURL} width='400px'/>
+                         <p>{item.productId.description}</p>
+                         <p>{item.productId.price}</p>
+                         <p>{item.productId.quantity}</p>
+                         <Button onClick={()=>deleteProduct(item.productId._id)}>Delete</Button>
 
                     </Col>
                 })}
