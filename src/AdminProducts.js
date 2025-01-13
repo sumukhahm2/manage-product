@@ -59,6 +59,7 @@ const AdminProducts=()=>{
             <Col className='col-4 text-center' key={product._id}>
             <div className='border border-ridge shadow-lg'>
                  <p className='fs-3'>{product.title}</p>
+                 <img src={product.imageURL} alt={product.imageURL} width='300px'/>
                  <p>{product.description}</p>
                  <p className='fs-4'>{product.price}</p>
                  <div className='d-flex justify-content-around'>

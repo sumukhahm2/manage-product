@@ -89,7 +89,7 @@ const AddProduct=(props)=>{
   
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>ImageURL</Form.Label>
-          <Form.Control type="text" placeholder="" ref={imageRef} defaultValue={props.data?props.data.image:''}/>
+          <Form.Control type="text" placeholder="" ref={imageRef} defaultValue={props.data?props.data.imageURL:''}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Description</Form.Label>

@@ -38,12 +38,14 @@ const AllProducts=()=>{
        })
        
     }
+    console.log(detail)
       return(
         <Container className='my-2'>
           {!detail && products && products.map(product=>
             <Col className='col-4 text-center' key={product._id}>
             <div className='border border-ridge shadow-lg'>
                  <p className='fs-3'>{product.title}</p>
+                 <img src={product.imageURL} alt={product.imageURL} width='300px'/>
                  <p>{product.description}</p>
                  <p className='fs-4'>{product.price}</p>
                  <div className='d-flex justify-content-around'>
@@ -53,11 +55,12 @@ const AllProducts=()=>{
               </div> 
         </Col>
           )}
-          {detail && <Col className=' text-center' key={detail[0]._id}>
+          {detail && <Col className=' text-center' key={detail._id}>
             <div className='border border-ridge shadow-lg'>
-                 <p className='fs-3'>{detail[0].title}</p>
-                 <p>{detail[0].description}</p>
-                 <p className='fs-4'>{detail[0].price}</p>
+                 <p className='fs-3'>{detail.title}</p>
+                 <img src={detail.imageURL} alt={detail.imageURL} width='500px'/>
+                 <p>{detail.description}</p>
+                 <p className='fs-4'>{detail.price}</p>
                  {/* <div className='d-flex justify-content-around'>
                   <Button className='mb-2' onClick={()=>detailsHandler(product)}>Details</Button>
                   <Button className='mb-2' onClick={()=>addToCartHandler(product)}>Add To Cart</Button>
